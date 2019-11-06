@@ -1,5 +1,8 @@
 package org.insset.shared;
 
+import java.util.Arrays;
+import java.util.List;
+
 /**
  * <p>
  * FieldVerifier validates that the name the user enters is valid.
@@ -21,6 +24,7 @@ package org.insset.shared;
  * </p>
  */
 public class FieldVerifier {
+    private static Object val;
 
     /**
      * Verifies that the specified name is valid for our service.
@@ -57,8 +61,11 @@ public class FieldVerifier {
     }
 
     public static boolean isValidRoman(String nbr) {
-        //Implement your code
-        return true;
+        if (nbr == null)
+                return false;
+         return nbr.matches("^M{0,4}(CM|CD|D?C{0,3})(XC|XL|L?X{0,3})(IX|IV|V?I{0,3})$");
+        
+       
     }
 
     public static boolean isValidDate(String date) {
