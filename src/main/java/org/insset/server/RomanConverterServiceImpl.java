@@ -43,27 +43,20 @@ public class RomanConverterServiceImpl extends RemoteServiceServlet implements
     public Integer convertRomanToArabe(String nbr) throws IllegalArgumentException {
         int oc,NewRV,OldRV=0,Result=0;
         
-        
-        
-        if (FieldVerifier.isValidRoman(nbr)){
+        for (oc=0;oc<nbr.length();oc++)
+        {
+            NewRV = RomanCharToValue(nbr.toCharArray()[oc]);
             
-            for (oc=0;oc<nbr.length();oc++)
+            if (NewRV > OldRV)
             {
-                NewRV = RomanCharToValue(nbr.toCharArray()[oc]);
-                
-                if (NewRV > OldRV)
-                {
-                    Result+=NewRV-(OldRV<<1);
-                }else
-                {
-                    Result+=NewRV;
-                }//endif
-                OldRV=NewRV;
-            }//endfor
-            return Result;
-           
-        }
-        return -1;
+                Result+=NewRV-(OldRV<<1);
+            }else
+            {
+                Result+=NewRV;
+            }//endif
+            OldRV=NewRV;
+        }//endfor
+        return Result;
     }
 
     @Override
