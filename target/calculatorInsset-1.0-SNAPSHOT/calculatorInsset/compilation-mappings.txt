@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 09A1DDB35EB05BED322B2EFDA242518F.cache.js
 user.agent gecko1_8
 
@@ -13,4 +14,21 @@ user.agent ie10
 F9A9E96371D15DF37A37DECCD16455AC.cache.js
 user.agent ie9
 
+=======
+34D761DAFFB3BD4E6BF4AD8D2EB85691.cache.js
+user.agent ie10
+
+A4230F0E8435A867C49560B9B58BED66.cache.js
+user.agent ie9
+
+CFC9468507DAE4A804C0732DAEB59B11.cache.js
+user.agent gecko1_8
+
+DF224A016CE22041463128A899F0AAFB.cache.js
+user.agent ie8
+
+F827FC4027A73439E727AA153D7D11BD.cache.js
+user.agent safari
+
+>>>>>>> Test isValidDecimal null case
 Devmode:devmode.js

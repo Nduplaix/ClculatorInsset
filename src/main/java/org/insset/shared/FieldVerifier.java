@@ -58,7 +58,9 @@ public class FieldVerifier {
      */
     public static boolean isValidDecimal(Integer nbr) {
         //Implement your code
-        return true;
+        if(nbr == null || nbr <= 0 || nbr >= 2000){
+            return false;
+        } return true;
     }
 
     public static boolean isValidRoman(String nbr) {
