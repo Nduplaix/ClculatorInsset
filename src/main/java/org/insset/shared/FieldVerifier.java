@@ -1,5 +1,11 @@
 package org.insset.shared;
 
+import com.google.gwt.i18n.shared.DateTimeFormat;
+import com.google.gwt.i18n.shared.DefaultDateTimeFormatInfo;
+import java.util.Date;
+import java.util.Arrays;
+import java.util.List;
+
 /**
  * <p>
  * FieldVerifier validates that the name the user enters is valid.
@@ -21,7 +27,6 @@ package org.insset.shared;
  * </p>
  */
 public class FieldVerifier {
-
     /**
      * Verifies that the specified name is valid for our service.
      *
@@ -53,16 +58,35 @@ public class FieldVerifier {
      */
     public static boolean isValidDecimal(Integer nbr) {
         //Implement your code
-        return true;
+        if(nbr == null || nbr <= 0 || nbr >= 2000){
+            return false;
+        } return true;
     }
 
     public static boolean isValidRoman(String nbr) {
-        //Implement your code
-        return true;
+        if (nbr == null)
+                return false;
+         return nbr.matches("^M{0,4}(CM|CD|D?C{0,3})(XC|XL|L?X{0,3})(IX|IV|V?I{0,3})$");
+
+
     }
 
     public static boolean isValidDate(String date) {
-        //Implement your code
+
+        if(date == null){
+            return false;
+        }
+
+        DefaultDateTimeFormatInfo info = new DefaultDateTimeFormatInfo();
+        DateTimeFormat sdf = new DateTimeFormat ("dd/MM/yyyy", info){};
+
+
+        try {
+            Date testDate = sdf.parseStrict(date);
+        } catch (Exception e) {
+            return false;
+        }
+
         return true;
     }
 }
