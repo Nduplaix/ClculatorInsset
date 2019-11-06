@@ -1,12 +1,6 @@
 -------------------------------------------------------------------------------
 Test set: org.insset.client.GwtTestcalculatorInsset
 -------------------------------------------------------------------------------
-<<<<<<< HEAD
-Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 21.471 sec
-testFieldVerifier(org.insset.client.GwtTestcalculatorInsset)  Time elapsed: 21.341 sec
-testExempleService(org.insset.client.GwtTestcalculatorInsset)  Time elapsed: 0.122 sec
-=======
-Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 15.064 sec
-testFieldVerifier(org.insset.client.GwtTestcalculatorInsset)  Time elapsed: 14.936 sec
-testExempleService(org.insset.client.GwtTestcalculatorInsset)  Time elapsed: 0.119 sec
->>>>>>> Test isValidDecimal null case
+Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 11.697 sec
+testFieldVerifier(org.insset.client.GwtTestcalculatorInsset)  Time elapsed: 11.605 sec
+testExempleService(org.insset.client.GwtTestcalculatorInsset)  Time elapsed: 0.086 sec
