@@ -22,16 +22,9 @@ public class RomanToArabTest {
     public static Collection<Object[]> params() {
         return Arrays.asList(
                 new Object[]{"V", 5},
-                new Object[]{"10", -1},
-                new Object[]{"hello", -1},
-                new Object[]{"IVM", -1},
-                new Object[]{null, -1},
                 new Object[]{"IV", 4},
                 new Object[]{"X", 10},
                 new Object[]{"L", 50}
-                
-                
-                
         );
     }
 
