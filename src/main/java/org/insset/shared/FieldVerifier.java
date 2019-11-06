@@ -1,5 +1,8 @@
 package org.insset.shared;
 
+import com.google.gwt.i18n.shared.DateTimeFormat;
+import com.google.gwt.i18n.shared.DefaultDateTimeFormatInfo;
+import java.util.Date;
 import java.util.Arrays;
 import java.util.List;
 
@@ -24,8 +27,6 @@ import java.util.List;
  * </p>
  */
 public class FieldVerifier {
-    private static Object val;
-
     /**
      * Verifies that the specified name is valid for our service.
      *
@@ -64,12 +65,26 @@ public class FieldVerifier {
         if (nbr == null)
                 return false;
          return nbr.matches("^M{0,4}(CM|CD|D?C{0,3})(XC|XL|L?X{0,3})(IX|IV|V?I{0,3})$");
-        
-       
+
+
     }
 
     public static boolean isValidDate(String date) {
-        //Implement your code
+
+        if(date == null){
+            return false;
+        }
+
+        DefaultDateTimeFormatInfo info = new DefaultDateTimeFormatInfo();
+        DateTimeFormat sdf = new DateTimeFormat ("dd/MM/yyyy", info){};
+
+
+        try {
+            Date testDate = sdf.parseStrict(date);
+        } catch (Exception e) {
+            return false;
+        }
+
         return true;
     }
 }
